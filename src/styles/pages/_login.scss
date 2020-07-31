@@ -1,0 +1,23 @@
+// $font-stack: Helvetica, sans-serif;
+// $primary-color: #333;
+// $formcolor: grey;
+
+.loginPage {
+  display: flex;
+  background-color: $tertiary;
+  flex-direction: column;
+  align-self: center;
+  justify-content: space-around;
+  // border: 1px solid;
+  border-radius: 20px;
+  padding: 45px;
+  // width: 50vw;
+}
+.data-Input {
+  // width: 30vw;
+}
+.button-Login {
+  background: red;
+  color: red;
+  border: 1px solid;
+}

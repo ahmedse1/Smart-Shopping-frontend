@@ -1,0 +1,28 @@
+@import "./abstracts/variables";
+@import "./base/_reset";
+@import "./components/transaction";
+@import "./components/sidebar";
+@import "./components/calender";
+@import "./pages/login";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+.App {
+  background-image: url("../ssbback.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  
+  height: 100vh;
+ 
+
+  font-family: "Open Sans";
+}
+.resultBox {
+  display: flex;
+
+  flex-direction: column;
+  align-self: center;
+  justify-content: space-around;
+  margin-top: 40px;
+  border-radius: 20px;
+  padding: 45px;
+}

@@ -1,0 +1,39 @@
+.sidebar {
+  background: $primary;
+  height: 100vh;
+
+  &__root {
+    display: flex;
+  }
+  &__settings {
+    // border: 1px solid red;
+    // display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+  }
+  &__settings--button {
+    font-size: 14;
+    color: $text_tertiary;
+    overflow: hidden;
+    min-width: 11vw;
+    text-overflow: ellipsis;
+  }
+  &__settings--container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+  }
+  &__settings--container--last {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+  }
+}
