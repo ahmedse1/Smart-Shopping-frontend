@@ -52,6 +52,7 @@ const Layout = (props) => {
           }}
           to="/home"
         >
+         
           <SiteTitle>Smart Shopping Bot</SiteTitle>
         </Link>
 

@@ -19,6 +19,7 @@ import Popover from "@material-ui/core/Popover";
 import Button from "../Button";
 import AddIcon from "@material-ui/icons/Add";
 import * as Colors from "../../styles/colors";
+import EditProduct from "../EditProduct";
 
 const Product = ({
   t,
@@ -30,12 +31,14 @@ const Product = ({
   getUsers,
   getQuestions,
   deleteProduct,
+  editProduct,
   getProducts,
   increaseQuantity,
   ...props
 }) => {
   const [expanded, setExpanded] = useState(false);
-  const [editBoxOpen, setEditBoxOpen] = useState(false);
+  const [openEdit, setEditBoxOpen] = useState(false);
+  //const [open, setBoxOpen] = useState(false);
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const popoverOpen = Boolean(anchorEl);
@@ -212,6 +215,28 @@ const Product = ({
                           text="Increase Quantity"
                         />
                       </div>
+                      <div>
+                        <Button
+                          onClick={() => {
+                            setEditBoxOpen(!openEdit);
+                          }}
+                          customStyle={{
+                            backgroundColor: Colors.FOCUSED,
+                            width: 140,
+                            borderRadius: 12,
+                            color: Colors.TEXT_PRIMARY,
+                            textAlign: "center",
+                            marginRight: 15,
+                          }}
+                          text="Edit Details"
+                        />
+                      </div>
+                      <EditProduct
+                        open={openEdit}
+                        activeCategoryId={12}
+                        handleClose={setEditBoxOpen}
+                        productId={product._id}
+                      />
                       <div>
                         <Button
                           onClick={() => {
